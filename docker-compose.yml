@@ -12,15 +12,6 @@ services:
       - pg-data:/var/lib/postgresql/data
     ports:
       - '5432:5432'
-  pgadmin:
-    image: dpage/pgadmin4
-    networks:
-      - application
-    environment:
-      PGADMIN_DEFAULT_EMAIL: test@test.org
-      PGADMIN_DEFAULT_PASSWORD: test
-    ports:
-      - '80:80'
   bookapp:
     image: bookapp:v1
     networks:
